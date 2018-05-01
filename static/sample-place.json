@@ -1,0 +1,250 @@
+{
+    "type": "FeatureCollection",
+    "query": [
+        "stanford"
+    ],
+    "features": [
+        {
+            "id": "place.8487619721879330",
+            "type": "Feature",
+            "place_type": [
+                "place"
+            ],
+            "relevance": 1,
+            "properties": {
+                "wikidata": "Q173813"
+            },
+            "text": "Stanford",
+            "place_name": "Stanford, California, United States",
+            "bbox": [
+                -122.19433241046,
+                37.3922000325912,
+                -122.149238643829,
+                37.4436320193809
+            ],
+            "center": [
+                -122.1677,
+                37.4248
+            ],
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.1677,
+                    37.4248
+                ]
+            },
+            "context": [
+                {
+                    "id": "region.3591",
+                    "short_code": "US-CA",
+                    "wikidata": "Q99",
+                    "text": "California"
+                },
+                {
+                    "id": "country.3145",
+                    "short_code": "us",
+                    "wikidata": "Q30",
+                    "text": "United States"
+                }
+            ]
+        },
+        {
+            "id": "place.3002326477797030",
+            "type": "Feature",
+            "place_type": [
+                "place"
+            ],
+            "relevance": 1,
+            "properties": {
+                "wikidata": "Q2469218"
+            },
+            "text": "Stanford-Le-Hope",
+            "place_name": "Stanford-Le-Hope, Thurrock, England, United Kingdom",
+            "matching_text": "Stanford Rivers",
+            "matching_place_name": "Stanford Rivers, Thurrock, England, United Kingdom",
+            "bbox": [
+                0.384735,
+                51.47632,
+                0.541411,
+                51.552055
+            ],
+            "center": [
+                0.468177,
+                51.514181
+            ],
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    0.468177,
+                    51.514181
+                ]
+            },
+            "context": [
+                {
+                    "id": "district.7790718948038830",
+                    "wikidata": "Q1549155",
+                    "text": "Thurrock"
+                },
+                {
+                    "id": "region.3185",
+                    "short_code": "GB-ENG",
+                    "wikidata": "Q21",
+                    "text": "England"
+                },
+                {
+                    "id": "country.358",
+                    "short_code": "gb",
+                    "wikidata": "Q145",
+                    "text": "United Kingdom"
+                }
+            ]
+        },
+        {
+            "id": "place.7272310435879330",
+            "type": "Feature",
+            "place_type": [
+                "place"
+            ],
+            "relevance": 1,
+            "properties": {
+                "wikidata": "Q951131"
+            },
+            "text": "Stanford",
+            "place_name": "Stanford, Kentucky, United States",
+            "bbox": [
+                -84.8578581027373,
+                37.4188369824814,
+                -84.5050819845349,
+                37.6256770185621
+            ],
+            "center": [
+                -84.6619,
+                37.5312
+            ],
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -84.6619,
+                    37.5312
+                ]
+            },
+            "context": [
+                {
+                    "id": "region.3224",
+                    "short_code": "US-KY",
+                    "wikidata": "Q1603",
+                    "text": "Kentucky"
+                },
+                {
+                    "id": "country.3145",
+                    "short_code": "us",
+                    "wikidata": "Q30",
+                    "text": "United States"
+                }
+            ]
+        },
+        {
+            "id": "poi.2222288887930360",
+            "type": "Feature",
+            "place_type": [
+                "poi"
+            ],
+            "relevance": 1,
+            "properties": {
+                "landmark": true,
+                "wikidata": "Q692470",
+                "tel": "(650) 723-5665",
+                "category": "arena, stadium",
+                "address": "601 Nelson Rd"
+            },
+            "text": "Stanford Stadium",
+            "place_name": "Stanford Stadium, 601 Nelson Rd, Stanford, California 94305, United States",
+            "center": [
+                -122.16111111111,
+                37.434444444444
+            ],
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.16111111111,
+                    37.434444444444
+                ]
+            },
+            "context": [
+                {
+                    "id": "postcode.14902275930472960",
+                    "text": "94305"
+                },
+                {
+                    "id": "place.8487619721879330",
+                    "wikidata": "Q173813",
+                    "text": "Stanford"
+                },
+                {
+                    "id": "region.3591",
+                    "short_code": "US-CA",
+                    "wikidata": "Q99",
+                    "text": "California"
+                },
+                {
+                    "id": "country.3145",
+                    "short_code": "us",
+                    "wikidata": "Q30",
+                    "text": "United States"
+                }
+            ]
+        },
+        {
+            "id": "neighborhood.293253",
+            "type": "Feature",
+            "place_type": [
+                "neighborhood"
+            ],
+            "relevance": 1,
+            "properties": {},
+            "text": "Stanford",
+            "place_name": "Stanford, Roseville, California 95678, United States",
+            "bbox": [
+                -121.295178,
+                38.783237,
+                -121.265755,
+                38.795759
+            ],
+            "center": [
+                -121.2783,
+                38.7921
+            ],
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.2783,
+                    38.7921
+                ]
+            },
+            "context": [
+                {
+                    "id": "postcode.3149134147928040",
+                    "text": "95678"
+                },
+                {
+                    "id": "place.13929638521333350",
+                    "wikidata": "Q491340",
+                    "text": "Roseville"
+                },
+                {
+                    "id": "region.3591",
+                    "short_code": "US-CA",
+                    "wikidata": "Q99",
+                    "text": "California"
+                },
+                {
+                    "id": "country.3145",
+                    "short_code": "us",
+                    "wikidata": "Q30",
+                    "text": "United States"
+                }
+            ]
+        }
+    ],
+    "attribution": "NOTICE: © 2017 Mapbox and its suppliers. All rights reserved. Use of this data is subject to the Mapbox Terms of Service (https://www.mapbox.com/about/maps/). This response and the information it contains may not be retained."
+}
