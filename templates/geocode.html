@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Place {{place}}</title>
+    <title>Geocoding {{query}}</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -18,8 +18,10 @@
 <body>
 
     <div class="container">
-            <h1>Place: {{place}}</h1>
+            <h1>Geocoding: &quot;{{ query }}&quot;</h1>
 
+            <h6>Result</h6>
+            <pre>{{ result | tojson }}</pre>
 
             <section>
                 <h2>The map</h2>
@@ -29,12 +31,14 @@
                 </div>
             </section>
 
+
+
+            {% include 'partials/geoquerybox.html' %}
     </div>
 
     <script>
-
-         var data = []
-         makemap('{{api_token}}', data)
+         var data = {{ result | tojson }};
+         makemap('{{api_token}}', data);
     </script>
 
 </body>

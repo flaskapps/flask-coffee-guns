@@ -1,10 +1,10 @@
-function makemap(accesstoken, places){
+function makemap(accesstoken, place){
   L.mapbox.accessToken = accesstoken;
+  var coords = [place['latitude'], place['longitude']];
   var mapLeaflet = L.mapbox.map('the-map', 'mapbox.light')
-    .setView([37.8, -96], 4);
+                           .setView(coords, 5);
 
-  L.marker([38.913184, -77.031952]).addTo(mapLeaflet);
-  L.marker([37.775408, -122.413682]).addTo(mapLeaflet);
+  L.marker(coords).addTo(mapLeaflet);
 
   mapLeaflet.scrollWheelZoom.disable();
 }
