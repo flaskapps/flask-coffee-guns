@@ -1,27 +1,13 @@
 from flask import Flask
 from flask import abort, render_template, request
 from os import environ
-import requests
-from urllib.parse import quote
-
+import mapboxfoo as foo
 
 MAPBOX_TOKEN = environ.get('MAPBOX_ACCESS_TOKEN')
 myapp = Flask(__name__)
 
 
-API_URL = 'https://api.mapbox.com/geocoding/v5/mapbox.places/{p}.json?access_token={t}'
 
-def geocode_foo(place, token=MAPBOX_TOKEN):
-    url = API_URL.format(p=quote(place), t=token)
-    resp = requests.get(url)
-    data = resp.json()
-    features = data['features']
-    feat = features[0]
-    d = {}
-    d['name'] = feat['place_name']
-    d['longitude'] = feat['geometry']['coordinates'][0]
-    d['latitude'] = feat['geometry']['coordinates'][1]
-    return d
 
 
 @myapp.route("/")
@@ -30,18 +16,38 @@ def homepage():
     return rawhtml
 
 
-@myapp.route("/geocode")
-def geocode():
+@myapp.route("/map")
+def geocode_map():
     if not MAPBOX_TOKEN:
         abort(428)
 
     q = request.args['query']
-    rawhtml = render_template('geocode.html',
+    result = foo.geocode(q, token=MAPBOX_TOKEN)
+    rawhtml = render_template('map.html',
                                query=q,
-                               result=geocode_foo(q),
+                               result=result,
                                api_token=MAPBOX_TOKEN)
     return rawhtml
 
+@myapp.route("/map-static")
+def geocode_staticmap():
+    if not MAPBOX_TOKEN:
+        abort(428)
+
+    q = request.args['query']
+    result = foo.geocode(q, token=MAPBOX_TOKEN)
+    mapimg = foo.static_map(longitude=result['longitude'],
+                            latitude=result['latitude'],
+                            token=MAPBOX_TOKEN)
+    rawhtml = render_template('map-static.html',
+                               query=q,
+                               mapimg=mapimg,
+                               result=result,)
+    # api token is generated and embedded in mapurl for now
+    # but probably not best practice
+
+
+    return rawhtml
 
 
 @myapp.errorhandler(428)
