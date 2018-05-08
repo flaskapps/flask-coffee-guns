@@ -1,5 +1,5 @@
 import requests
-from urllib.parse import quote
+from urllib.parse import quote, urlencode
 
 GEOCODE_API_URL = 'https://api.mapbox.com/geocoding/v5/mapbox.places/{p}.json?access_token={t}'
 
@@ -23,7 +23,7 @@ def geocode(place, token):
 
 ICON_URL = 'https://compciv.github.io/stash/bouncy.png'
 
-def static_map(longitude, latitude, token):
+def static_mapbox(longitude, latitude, token):
     imgurl = quote(ICON_URL, safe='')
     return STATIC_MAP_API_URL.format(
                             iconurl=imgurl,
@@ -34,3 +34,9 @@ def static_map(longitude, latitude, token):
                             height=500,
                             t=token)
 
+
+GOOGLE_MAPS_ENDPOINT = 'https://maps.googleapis.com/maps/api/staticmap'
+def static_google(longitude, latitude):
+    """
+    Returns a string
+    """
