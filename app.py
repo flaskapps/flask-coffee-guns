@@ -25,32 +25,33 @@ def geocode_map():
     result = foo.geocode(q, token=MAPBOX_TOKEN)
     rawhtml = render_template('map.html',
                                query=q,
+                               mapmode=request.args['mapmode'],
                                result=result,
                                api_token=MAPBOX_TOKEN)
     return rawhtml
 
-@myapp.route("/map-static")
-def geocode_staticmap():
-    if not MAPBOX_TOKEN:
-        abort(428)
+# @myapp.route("/map-static")
+# def geocode_staticmap():
+#     if not MAPBOX_TOKEN:
+#         abort(428)
 
-    q = request.args['query']
-    result = foo.geocode(q, token=MAPBOX_TOKEN)
-    mapimg = foo.static_map(longitude=result['longitude'],
-                            latitude=result['latitude'],
-                            token=MAPBOX_TOKEN)
-
-
-
-    rawhtml = render_template('map-static.html',
-                               query=q,
-                               mapimg=mapimg,
-                               result=result,)
-    # api token is generated and embedded in mapurl for now
-    # but probably not best practice
+#     q = request.args['query']
+#     result = foo.geocode(q, token=MAPBOX_TOKEN)
+#     mapimg = foo.static_map(longitude=result['longitude'],
+#                             latitude=result['latitude'],
+#                             token=MAPBOX_TOKEN)
 
 
-    return rawhtml
+
+#     rawhtml = render_template('map-static.html',
+#                                query=q,
+#                                mapimg=mapimg,
+#                                result=result,)
+#     # api token is generated and embedded in mapurl for now
+#     # but probably not best practice
+
+
+#     return rawhtml
 
 
 @myapp.errorhandler(428)
