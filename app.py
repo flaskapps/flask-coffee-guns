@@ -21,7 +21,7 @@ def geocode_map():
     if not MAPBOX_TOKEN:
         abort(428)
 
-    q = request.args['query']
+    q = request.args['q']
     result = foo.geocode(q, token=MAPBOX_TOKEN)
     rawhtml = render_template('map.html',
                                query=q,
@@ -39,6 +39,9 @@ def geocode_staticmap():
     mapimg = foo.static_map(longitude=result['longitude'],
                             latitude=result['latitude'],
                             token=MAPBOX_TOKEN)
+
+
+
     rawhtml = render_template('map-static.html',
                                query=q,
                                mapimg=mapimg,

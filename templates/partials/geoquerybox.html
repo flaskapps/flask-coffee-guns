@@ -1,25 +1,18 @@
-        <div class="geocode-box">
-            <p>Type in a place name to geocode:</p>
-            <form action="/map">
-                <input type="text" name="query">
-                <input type="submit" value="Map!">
-            </form>
-
-        </div>
 
 
-        <div class="geocode-box">
-            <p>Type in a place name to geocode and static map:</p>
-            <form action="/map-static">
-                <input type="text" name="query">
-                <input type="submit" value="Static Map!">
-            </form>
+<section class="geocode-box">
+    <p>Type in a place name to geocode:</p>
+    <form action="/map">
+        <input type="text" name="query">
+        <select name="mapmode">
+            <option value="static" selected>Static</option>
+            <option value="interactive">Interactive</option>
+        </input>
 
-        </div>
+        <input type="submit" value="Map!">
+    </form>
+
+</section>
 
 
-    <footer>
-        <p>Geocoding comes from the Mapbox geocoding API</p>
 
-        <p>Static map comes from the <a href="https://www.mapbox.com/api-documentation/#static">Mapbox static maps API</a></p>
-    </footer>

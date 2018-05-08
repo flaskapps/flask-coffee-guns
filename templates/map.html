@@ -17,29 +17,23 @@
 </head>
 <body>
 
-    <div class="container">
+    <article class="container">
             <h1>Geocoding: &quot;{{ query }}&quot;</h1>
 
             <h6>Result</h6>
             <pre>{{ result | tojson }}</pre>
 
-            <section>
-                <h2>The map</h2>
-                <div id="the-map">
-
-
-                </div>
+            <section id="mapbox-stuff">
+                {% if mapmode == 'static' %}
+                    {% include 'partials/map-static.html' %}
+                {% elif mapmode == 'interactive' %}
+                    {% include 'partials/map-interactive.html' %}
+                {% endif %}
             </section>
 
-
-
             {% include 'partials/geoquerybox.html' %}
-    </div>
+    </article>
 
-    <script>
-         var data = {{ result | tojson }};
-         makemap('{{api_token}}', data);
-    </script>
 
 </body>
 </html>
