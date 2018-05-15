@@ -31,21 +31,14 @@ def get_starbucks():
     df = pd.read_csv(STARBUCKS_DATA_PATH)
     return df.to_dict('records')
 
-def get_starbucks_by_state(state):
-    states = []
-    starbucks  = get_starbucks()
-    for s in starbucks:
-        if state in s['Country Subdivisions']
 
 def get_starbucks_by_zip(zipcode):
     mylist = []
     for s in get_starbucks():
         if zipcode in s['Postal Code']:
-<<<<<<< HEAD
-            mylist.append()
-=======
             mylist.append(s)
     return mylist
+
 
 def get_starbucks_by_state(state):
     mylist = []
@@ -54,16 +47,6 @@ def get_starbucks_by_state(state):
         if state in s['Country Subdivision']:
             mylist.append(s)
     return mylist
-
-def get_starbucks_by_state(state):
-    mylist = []
-    starbucks = get_starbucks()
-    for b in starbucks:
-        if state in s['State']:
-            mylist.append(b)
-    return mylist
-
->>>>>>> f5d313b6c7269b087bcd8e819b2c1dfdd3a3fab5
 
 
 def get_nearest_starbucks(mylng, mylat):
