@@ -1,6 +1,11 @@
 # README
 
+<<<<<<< HEAD
 Hey, it's Anthony!
+=======
+Dan Nguyen
+
+>>>>>>> 2bd45b8b7023eae2c2d5f7e69d56b086fc0474a8
 
 ## Associated material
 
