@@ -1,5 +1,6 @@
 # README
 
+Charlotte Kosche
 
 ## Associated material
 
