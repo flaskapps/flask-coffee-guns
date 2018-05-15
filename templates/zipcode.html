@@ -7,5 +7,13 @@
 <body>
     <h1>Things at the zip code of {{zipcode}}</h1>
 
+   <p>
+       There are {{ starbucks | length }} Starbucks in {{zipcode}}</p>
+    
+       {% for s in starbucks %}
+       {{ s['Name'] }}
+    
+       {% endfor %}
+
 </body>
 </html>
