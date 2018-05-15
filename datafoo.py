@@ -33,7 +33,11 @@ def get_starbucks():
 
 
 def get_starbucks_by_zip(zipcode):
-    return ""
+    mystarbucks = []
+    df = pd.read_csv(STARBUCKS_DATA_PATH)
+    if zipcode.len == 5
+        mystarbucks.add(zipcode)
+    return mystarbucks
 
 
 def get_nearest_starbucks(mylng, mylat):
