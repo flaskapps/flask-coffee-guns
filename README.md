@@ -1,5 +1,7 @@
 # README
 
+Tamu Adumer
+
 Dan Nguyen is cool
 
 Charlotte Kosche
