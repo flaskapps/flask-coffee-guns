@@ -48,6 +48,15 @@ def get_starbucks_by_state(state):
             mylist.append(s)
     return mylist
 
+def get_starbucks_by_state(state):
+    mylist = []
+    starbucks = get_starbucks()
+    for b in starbucks:
+        if state in s['State']:
+            mylist.append(b)
+    return mylist
+
+
 
 def get_nearest_starbucks(mylng, mylat):
     starbucks = get_starbucks()
