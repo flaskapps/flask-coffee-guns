@@ -31,16 +31,24 @@ def get_starbucks():
     df = pd.read_csv(STARBUCKS_DATA_PATH)
     return df.to_dict('records')
 
-#def get_starbucks_by_zip(zipcode):
+
+def get_starbucks_by_zip(zipcode):
     mylist = []
     starbucks = get_starbucks()
-    for s in starbucks 
-        if zipcode in s[Pos]
- #   mystarbucks = []
- #   df = pd.read_csv(STARBUCKS_DATA_PATH)
-  #  if zipcode.len == 5
-  #      mystarbucks.add(zipcode)
-  #  return mystarbucks
+    for s in starbucks:
+        if zipcode in s['Postal Code']:
+            mylist.append(s)
+    return mylist
+
+
+def get_starbucks_by_state(state):
+    mylist = []
+    starbucks = get_starbucks()
+    for b in starbucks:
+        if state in s['State']:
+            mylist.append(b)
+    return mylist
+
 
 
 def get_nearest_starbucks(mylng, mylat):
