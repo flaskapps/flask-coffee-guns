@@ -34,8 +34,7 @@ def get_starbucks():
 
 def get_starbucks_by_zip(zipcode):
     mylist = []
-    starbucks = get_starbucks()
-    for s in starbucks:
+    for s in get_starbucks():
         if zipcode in s['Postal Code']:
             mylist.append(s)
     return mylist
