@@ -1,5 +1,7 @@
 # README
 
+Dan Nguyen
+
 
 ## Associated material
 
