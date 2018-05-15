@@ -44,7 +44,7 @@ def get_starbucks_by_state(state):
     mylist = []
     starbucks = get_starbucks()
     for s in starbucks:
-        if state in s['Country Subdivision']_
+        if state in s['Country Subdivision']:
             mylist.append(s)
     return mylist
 
