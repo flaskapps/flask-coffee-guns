@@ -40,6 +40,13 @@ def get_starbucks_by_zip(zipcode):
             mylist.append(s)
     return mylist
 
+def get_starbucks_by_state(state):
+    mylist = []
+    starbucks = get_starbucks()
+    for s in starbucks:
+        if state in s['Country Subdivision']_
+            mylist.append(s)
+    return mylist
 
 
 def get_nearest_starbucks(mylng, mylat):
