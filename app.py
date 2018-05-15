@@ -8,8 +8,6 @@ myapp = Flask(__name__)
 
 
 
-
-
 @myapp.route("/")
 def homepage():
     rawhtml = render_template('homepage.html')
