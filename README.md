@@ -1,6 +1,6 @@
 # README
 
-Dan Nguyen
+Dan Nguyen is cool
 
 
 ## Associated material
