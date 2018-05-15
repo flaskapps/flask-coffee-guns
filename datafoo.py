@@ -33,7 +33,10 @@ def get_starbucks():
 
 
 def get_starbucks_by_zip(zipcode):
-    return ""
+    starbucks = []
+    for zip in zipcodes:
+        starbucks.append(zip)
+    return starbucks
 
 
 def get_nearest_starbucks(mylng, mylat):
