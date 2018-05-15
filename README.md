@@ -1,7 +1,9 @@
 # README
 
 Dan Nguyen is cool
+
 Charlotte Kosche
+
 Hey, it's Anthony!
 
 
