@@ -1,7 +1,7 @@
 from flask import Flask
 from flask import abort, render_template, request
 from os import environ
-import mapboxfoo as foo
+import datafoo as foo
 
 MAPBOX_TOKEN = environ.get('MAPBOX_ACCESS_TOKEN')
 myapp = Flask(__name__)
@@ -15,8 +15,9 @@ def homepage():
 
 @myapp.route("/zip/<zipcode>")
 def by_zipcode(zipcode):
-    starbucks=get_starbucks_by_zip(zipcode)
-    rawhtml = render_template('zipcode.html', starbucks=starbucks)
+    starbucks = foo.get_starbucks_by_zip(zipcode)
+    rawhtml = render_template('zipcode.html', zipcode=zipcode,
+                                              starbucks=starbucks)
     return rawhtml
 
 # @myapp.route("/map")
