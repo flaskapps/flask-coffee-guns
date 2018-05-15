@@ -32,6 +32,10 @@ def get_starbucks():
     return df.to_dict('records')
 
 
+def get_starbucks_by_zip(zipcode):
+    return ""
+
+
 def get_nearest_starbucks(mylng, mylat):
     starbucks = get_starbucks()
     return sorted(starbucks, key=lambda x: calc_geo_distance(mylng, mylat, x['Longitude'], x['Latitude']))

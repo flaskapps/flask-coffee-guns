@@ -1,9 +1,0 @@
-<h2>The interactive map</h2>
-<div id="the-map"></div>
-
-<script src="/static/mymapper.js"></script>
-<script>
-     var data = {{ result | tojson }};
-     makemap('{{api_token}}', data);
-
-</script>

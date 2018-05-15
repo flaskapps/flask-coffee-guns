@@ -13,20 +13,25 @@ def homepage():
     rawhtml = render_template('homepage.html')
     return rawhtml
 
-
-@myapp.route("/map")
-def geocode_map():
-    if not MAPBOX_TOKEN:
-        abort(428)
-
-    q = request.args['q']
-    result = foo.geocode(q, token=MAPBOX_TOKEN)
-    rawhtml = render_template('map.html',
-                               query=q,
-                               mapmode=request.args['mapmode'],
-                               result=result,
-                               api_token=MAPBOX_TOKEN)
+@myapp.route("/zip/<zipcode>")
+def by_zipcode(zipcode):
+    starbucks=get_starbucks_by_zip(zipcode)
+    rawhtml = render_template('zipcode.html', starbucks=starbucks)
     return rawhtml
+
+# @myapp.route("/map")
+# def geocode_map():
+#     if not MAPBOX_TOKEN:
+#         abort(428)
+
+#     q = request.args['q']
+#     result = foo.geocode(q, token=MAPBOX_TOKEN)
+#     rawhtml = render_template('map.html',
+#                                query=q,
+#                                mapmode=request.args['mapmode'],
+#                                result=result,
+#                                api_token=MAPBOX_TOKEN)
+#     return rawhtml
 
 # @myapp.route("/map-static")
 # def geocode_staticmap():
