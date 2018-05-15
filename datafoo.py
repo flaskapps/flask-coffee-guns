@@ -34,7 +34,7 @@ def get_starbucks():
 
 def get_starbucks_by_zip(zipcode):
     starbucks = []
-    for zip in zipcodes:
+    for zip in zipcode:
         starbucks.append(zip)
     return starbucks
 
