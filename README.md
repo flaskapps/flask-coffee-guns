@@ -1,6 +1,15 @@
 # README
 
+<<<<<<< HEAD
 Charlotte Kosche
+=======
+<<<<<<< HEAD
+Hey, it's Anthony!
+=======
+Dan Nguyen
+
+>>>>>>> 2bd45b8b7023eae2c2d5f7e69d56b086fc0474a8
+>>>>>>> b25bad1600299919c78e5a9ab83adf20bf97aaf2
 
 ## Associated material
 
